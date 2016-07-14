@@ -24,6 +24,30 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- Nav logo and user login information -->
+        <nav class="navbar navbar-top-header bg-menu">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#/" class="nav-logo">
+                        <img src="img/template/VMNS_Horizontal.png" width="46px" alt="logo-vmns">
+                        <div class="logo-name">Virtualmedia Signage</div>
+                    </a>
+                </div>
+                <ul class="nav navbar-nav navbar-right config-user-menu" ng-controller="userInformation">
+                    <li><a href="#" class="a-user-menu">{{ userResult.name }} {{ userResult.last_name }}</a></li>
+                    <li>
+                        <a href="#" class="a-user-menu"> <i class="fa fa-bell" aria-hidden="true"></i> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="a-user-menu"> <i class="fa fa-envelope" aria-hidden="true"></i> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="a-user-menu"> <i class="fa fa-cog" aria-hidden="true"></i> </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
 
 
         <script src="js/vendor/angular/angular-resource.min.js"></script>
