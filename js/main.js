@@ -3,7 +3,22 @@
 var vmsApp = angular.module("vmSignage", ['ngRoute', 'ngResource']);
 
 // =======================================================================================
-// Consume Json with user data
+// Routes config
+// =======================================================================================
+vmsApp.config( function($routeProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl:    'views/content/content.html',
+            controller:     'views/content/contentController.js'
+        })
+        .when('/content', {
+            templateUrl:    'views/content/content.html',
+            controller:     'views/content/contentController.js'
+        });
+});
+
+// =======================================================================================
+// Consume JSON with user data
 // =======================================================================================
 vmsApp.service("dataUser", ["$resource", function($resource) {
 
@@ -19,7 +34,7 @@ vmsApp.service("dataUser", ["$resource", function($resource) {
 // =======================================================================================
 // Header user config controller
 // =======================================================================================
-vmsApp.controller("userInformation", ["$scope", "dataUser", function($scope, dataUser) {
+vmsApp.controller("userInformation", ["$scope", "$location", "dataUser", function($scope, $location, dataUser) {
 
     $scope.userResult = {};
 

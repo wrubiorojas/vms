@@ -35,6 +35,7 @@ body {
 }
 
 .navbar-header .logo-name {
+    color: #B3B3B3;
     font-size: 16px;
     padding-top: 7px;
     width: 210px;
@@ -62,7 +63,8 @@ body {
 .navbar-top-header div ul li a {
     background-color: #454545;
     border-right: 1px solid #383838;
-    color: #C9C9C9;
+    color: #B3B3B3;
+    font-size: 13px;
     padding-top: 4px;
     padding-bottom: 4px;
 }
@@ -70,9 +72,83 @@ body {
 .navbar-top-header div ul li a:hover,
 .navbar-top-header div ul li a:focus {
     background-color: #292929;
-    color: #C9C9C9;
+    color: #B3B3B3;
 }
 
+/* ============================================================================
+   Main menus and search styles
+   ============================================================================ */
+#main-menu {
+    margin-bottom: 2px;
+}
+#main-menu div div div:not(:last-child) {
+    padding-right: 2px;
+}
+
+#main-menu div div div a {
+    background-color: #292929;
+    color: #666661;
+    display:block;
+    font-size: 13px;
+    height: 34px;
+    max-width: 600px;
+    padding: 8px 14px;
+    text-align: center;
+    width: 100%;
+}
+
+#main-menu div div div a:hover,
+#main-menu div div div a:focus,
+#main-menu div div div a:active {
+    background-color: #323333;
+    color: #B3B3B3;
+    border-bottom: 1px solid #2F65C9;
+    text-decoration: none;
+}
+
+/* ==================================================  Main menu - search style */
+#main-seach {
+    background-color: #323333;
+    border-left: 2px solid #252525;
+    height: 34px;
+    padding: 2px 18px;
+}
+.search {
+    margin-top: 4px;
+    margin-right: 0;
+}
+
+#custom-search-input {
+    border-radius: 4px;
+    background-color: #232323;
+}
+
+#custom-search-input input {
+    border: 0;
+    box-shadow: none;
+    background-color: #232323;
+    color: #B3B3B3;
+}
+
+#custom-search-input button {
+    background-color: #454545;
+    border-left: 1px solid #454545;
+    color: #B3B3B3;
+    margin-right: -1px;
+    width: 40px;
+}
+
+#custom-search-input button:hover,
+#custom-search-input button:focus {
+    border: none;
+    border-right: 1px solid #232323;
+    box-shadow: none;
+    outline: 0;
+}
+
+#custom-search-input .input-group .form-control {
+    height: 22px;
+}
 /* ============================================================================
    General styles
    ============================================================================ */
@@ -108,7 +184,7 @@ a:visited {
 }
 
 .upload-color {
-    color: #2F65C9
+    color: #2F65C9;
 }
 
 .download-color {
