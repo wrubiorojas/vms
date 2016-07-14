@@ -2,18 +2,29 @@
 
 var vmsApp = angular.module("vmSignage", ['ngRoute', 'ngResource']);
 
-//
+// =======================================================================================
 // Consume Json with user data
-//
+// =======================================================================================
 vmsApp.service("dataUser", ["$resource", function($resource) {
 
-    var getUserInformation = $resource("data/data.json", {}, {
+    return $resource("data/data.json", {}, {
         query: {
             method: "GET",
             isArray: false
         }
     });
 
-    return getUserInformation;
+}]);
+
+// =======================================================================================
+// Header user config controller
+// =======================================================================================
+vmsApp.controller("userInformation", ["$scope", "dataUser", function($scope, dataUser) {
+
+    $scope.userResult = {};
+
+    dataUser.query().$promise.then(function(data) {
+        $scope.userResult = data.user;
+    });
 
 }]);
