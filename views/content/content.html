@@ -1,3 +1,32 @@
-<div ng-controller="contentController">
-    {{ algo }}
+<div  id="content-container" class="row no-gutter" ng-controller="contentController">
+    <!-- Navbar submenus content menu -->
+    <div id="" class="col-md-9">
+        <div id="submenus-container" class="vanbar bg-menu">
+            <a href="" class="btn-root">
+                <i class="fa fa-home"></i> &nbsp;Root
+            </a>
+            <span class="content-submenu-line"> | </span>
+            <a href="" class="" role="buttom">
+                <i class="fa fa-folder folder-color"></i> New Folder
+            </a>
+            <a href="" class="" role="buttom">
+                <i class="fa fa-upload upload-color"></i> Upload File
+            </a>
+            <a href="" class="" role="buttom">
+                <i class="fa fa-download download-color"></i> Download File
+            </a>
+        </div>
+    </div>
+
+    <!-- active menu of submenus content -->
+    <div class="col-md-3">
+        <div id="content-active-submenu" class="row no-gutter">
+            <div class="col-md-1 content-active-submenu-line"> || </div>
+            <div class="col-md-4">
+                <a href=""> File Information </a>
+            </div>
+            <div class="col-md-4">2</div>
+            <div class="col-md-3">3</div>
+        </div>
+    </div>
 </div>
