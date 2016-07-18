@@ -44,6 +44,8 @@ body {
 /* ===================================================  User information styles */
 .navbar-top-header div ul {
     background-color: #454545;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     border-radius: 4px;
     height: 28px;
     margin-top: 10px;
@@ -126,6 +128,8 @@ body {
 }
 
 #custom-search-input {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     border-radius: 4px;
     background-color: #232323;
 }
@@ -223,6 +227,53 @@ body {
     height: 100vh;
     min-height: 100%;
     padding: 10px 15px;
+}
+
+/* ============================================================================
+   User Folders thumbnail
+   ============================================================================ */
+#content-media-files {
+    padding: 20px 5px;
+    overflow: auto;
+    max-height: 85vh;
+}
+
+#content-media-files #container-folder {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#content-media-files div a.thumbnail {
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    display: block;
+    background-color: transparent;
+    text-align: center;
+}
+
+#content-media-files div a.thumbnail:hover,
+#content-media-files div a.thumbnail:focus {
+    background-color: #323333;
+    text-decoration: none;
+}
+
+#content-media-files div a div img {
+    max-width: 32px;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+
+#content-media-files div a div i {
+    font-size: 60px;
+}
+
+#content-media-files div a div.caption {
+    color: #B3B3B3;
+    font-size: 12px;
+    padding: 0 9px;
 }
 /* ============================================================================
    General styles

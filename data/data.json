@@ -5,7 +5,7 @@
         "media": [
             {
                 "folder": {
-                    "nameFolder": "folder 1",
+                    "nameFolder": "Folder name 1",
                     "files": {
                         "img": {
                             "name": "imagen",
@@ -31,12 +31,25 @@
             },
             {
                 "folder": {
-                    "nameFolder": "folder2",
+                    "nameFolder": "Folder name 2",
+                    "files": {
+                    }
+                }
+            },
+            {
+                "folder": {
+                    "nameFolder": "Folder name 3",
+                    "files": {
+                    }
+                }
+            },
+            {
+                "folder": {
+                    "nameFolder": "Folder name 4",
                     "files": {
                     }
                 }
             }
-
         ]
     }
 }

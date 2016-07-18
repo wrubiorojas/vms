@@ -20,10 +20,18 @@
             </a>
         </div>
 
-        <!-- -->
-        <div id="content-media-files">
-            <div ng-repeat="folder in mediaFiles">
-
+        <!-- User Folders thumbnail -->
+        <div id="content-media-files" class="row no-gutter">
+            <div id="container-folder" class="col-md-2" ng-repeat="folder in userResult.media ">
+                <a href="" class="thumbnail">
+                    <div>
+                        <img src="img/template/VMNS_Horizontal.png" alt="preview">
+                        <i class="fa fa-folder folder-color"></i>
+                    </div>
+                    <div class="caption">
+                        {{ folder.folder.nameFolder }}
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -40,7 +48,7 @@
             </div>
         </div>
 
-        <!-- -->∫∫
+        <!-- -->
         <div id="content-information-container">
             ....
         </div>
