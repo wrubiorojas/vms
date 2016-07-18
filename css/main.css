@@ -192,25 +192,37 @@ body {
 .content-active-submenu-line {
     background-color: #323333;
     text-align: center;
-    height: 28px;
+    height: 30px;
     padding-top: 4px;
     border-left: 2px solid #252525;
-    border-right: 1px solid #252525;
+    border-right: 2px solid #252525;
+    border-bottom: 2px solid #252525;
 }
 
 #content-active-submenu div a {
+    background-color: #323333;
     color: #B3B3B3;
     display: block;
-    font-size: 12px;
+    font-size: 13px;
+    height: 30px;
+    padding-top: 6px;
     text-align: center;
 }
 #content-active-submenu div a:hover,
 #content-active-submenu div a:focus {
-    background-color: #323333;
     color: #B3B3B3;
     display: block;
-    border-bottom: 1px solid #2F65C9;
     text-decoration: none;
+}
+
+/* ==================================================  Main menu - search style */
+#content-information-container{
+    background-color: #323333;
+    border-left: 2px solid #252525;
+    display: block;
+    height: 100vh;
+    min-height: 100%;
+    padding: 10px 15px;
 }
 /* ============================================================================
    General styles
