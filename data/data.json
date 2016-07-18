@@ -2,31 +2,41 @@
     "user": {
         "name": "Christian Jr",
         "last_name": "Giraldo",
-        "media": {
-            "folder": {
-                "nameFolder": "folder 1",
-                "files": {
-                    "img": {
-                        "name": "imagen",
-                        "width": "100px",
-                        "height": "200px",
-                        "type": "png",
-                        "path": "/"
-                    }
-                },
+        "media": [
+            {
                 "folder": {
-                    "nameFolder": "subfolder 1",
+                    "nameFolder": "folder 1",
                     "files": {
-                        "video": {
-                            "name": "video name",
-                            "width": "1920px",
-                            "height": "1080px",
-                            "type": "mp4",
+                        "img": {
+                            "name": "imagen",
+                            "width": "100px",
+                            "height": "200px",
+                            "type": "png",
                             "path": "/"
+                        }
+                    },
+                    "folder": {
+                        "nameFolder": "subfolder 1",
+                        "files": {
+                            "video": {
+                                "name": "video name",
+                                "width": "1920px",
+                                "height": "1080px",
+                                "type": "mp4",
+                                "path": "/"
+                            }
                         }
                     }
                 }
+            },
+            {
+                "folder": {
+                    "nameFolder": "folder2",
+                    "files": {
+                    }
+                }
             }
-        }
+
+        ]
     }
 }

@@ -1,6 +1,9 @@
 <div  id="content-container" class="row no-gutter" ng-controller="contentController">
-    <!-- Navbar submenus content menu -->
+
+
     <div id="" class="col-md-9">
+
+        <!-- Navbar submenus content menu -->
         <div id="submenus-container" class="vanbar bg-menu">
             <a href="" class="btn-root">
                 <i class="fa fa-home"></i> &nbsp;Root
@@ -16,18 +19,32 @@
                 <i class="fa fa-download download-color"></i> Download File
             </a>
         </div>
+
+        <!-- -->
+        <div id="content-media-files">
+            <div ng-repeat="folder in mediaFiles">
+
+            </div>
+        </div>
+
     </div>
 
-    <!-- active menu of submenus content -->
+
     <div class="col-md-3">
+
+        <!-- active menu of submenus content -->
         <div id="content-active-submenu" class="row no-gutter">
             <div class="col-md-1 content-active-submenu-line"> || </div>
             <div class="col-md-11">
                 <a href=""> File Information </a>
             </div>
         </div>
+
+        <!-- -->∫∫
         <div id="content-information-container">
             ....
         </div>
+
     </div>
+
 </div>

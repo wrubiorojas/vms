@@ -55,6 +55,7 @@ vmsApp.controller("userInformation", ["$scope", "$routeParams", "$location", "da
     // Set JSON data to $scope variable
     dataUser.query().$promise.then(function(data) {
         $scope.userResult = data.user;
+        $scope.mediaFiles = data.user.media;
     });
 
     // ===================================================================================
