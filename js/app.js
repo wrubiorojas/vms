@@ -12,11 +12,13 @@ define( ['angularAMD', 'angular-route', 'angular-resource' ], function(angularAM
         $routeProvider
             .when('/', angularAMD.route ({
                 templateUrl:    'views/content/content.html',
-                controller:     'contentController'
+                controller:     '',
+                controllerUrl:  'controller/contentController'
             }))
             .when('/content', angularAMD.route ({
                 templateUrl:    'views/content/content.html',
-                controller:     'contentController'
+                controller:     '',
+                controllerUrl:  'controller/contentController'
             }))
             .when('/setlg', angularAMD.route ({
                 templateUrl:    'views/setlg/setlg.html',
@@ -33,7 +35,56 @@ define( ['angularAMD', 'angular-route', 'angular-resource' ], function(angularAM
 
     });
 
+    // =======================================================================================
+    // Consume JSON with user data
+    // =======================================================================================
+    app.service("dataUser", ["$resource", function($resource) {
+
+        return $resource("data/data.json", {}, {
+            query: {
+                method: "GET",
+                isArray: false
+            }
+        });
+
+    }]);
+
+    // =======================================================================================
+    // Header user config controller
+    // =======================================================================================
+    app.controller("userInformation", ["$scope", "$routeParams", "$location", "dataUser", function($scope, $routeParams, $location, dataUser) {
+
+        $scope.userResult   = {};
+        $scope.lastPath     = '';
+
+        // ===================================================================================
+        // Set JSON data to $scope variable
+        dataUser.query().$promise.then(function(data) {
+            $scope.userResult = data.user;
+        });
+
+        // ===================================================================================
+        // Get path to add and remove active class in the principal menu
+        $scope.$on('$routeChangeSuccess', function(e, current, pre) {
+            var setPath     = $location.path(),
+                subStrPath  = setPath.substring(1);
+
+            if( subStrPath == '' ) { subStrPath = 'content'; }
+
+            $('#' + subStrPath ).addClass('active');
+
+            if( $scope.lastPath != subStrPath && $scope.lastPath != '' ){
+                $('#'+$scope.lastPath).removeClass('active');
+            }
+
+            $scope.lastPath = subStrPath;
+        });
+
+    }]);
+
     // Bootstrap Angular when DOM is ready
-    return angularAMD.bootstrap(app);
+    angularAMD.bootstrap(app);
+
+    return app;
 
 });
