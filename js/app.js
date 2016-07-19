@@ -2,12 +2,12 @@ define( ['angularAMD', 'angular-route', 'angular-resource' ], function(angularAM
 
     'use strict';
 
-    var vmsApp = angular.module("vmSignage", ['ngRoute', 'ngResource']);
+    var app = angular.module("vmSignage", ['ngRoute', 'ngResource']);
 
     // =======================================================================================
     // Routes config
     // =======================================================================================
-    vmsApp.config( function($routeProvider) {
+    app.config( function($routeProvider) {
 
         $routeProvider
             .when('/', angularAMD.route ({
