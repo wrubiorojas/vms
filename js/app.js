@@ -12,25 +12,28 @@ define( ['angularAMD', 'angular-route', 'angular-resource' ], function(angularAM
         $routeProvider
             .when('/', angularAMD.route ({
                 templateUrl:    'views/content/content.html',
-                controller:     '',
+                controller:     'contentController',
                 controllerUrl:  'controller/contentController'
             }))
             .when('/content', angularAMD.route ({
                 templateUrl:    'views/content/content.html',
-                controller:     '',
+                controller:     'contentController',
                 controllerUrl:  'controller/contentController'
             }))
             .when('/setlg', angularAMD.route ({
                 templateUrl:    'views/setlg/setlg.html',
-                controller:     ''
+                controller:     '',
+                controllerUrl:  ''
             }))
             .when('/setplaylist', angularAMD.route ({
                 templateUrl:    'views/setplaylist/setplaylist.html',
-                controller:     ''
+                controller:     '',
+                controllerUrl:  ''
             }))
             .when('/setshcedule', angularAMD.route ({
                 templateUrl:    'views/setschedule/setschedule.html',
-                controller:     ''
+                controller:     '',
+                controllerUrl:  ''
             }));
 
     });

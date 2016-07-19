@@ -2,7 +2,9 @@ define( [ 'app' ], function(app){
 
     'use strict';
 
-    app.controller("contentController", ["$scope", "$routeParams", "$location", "dataUser", function($scope, $routeParams, $location, dataUser) {
+    app.register.controller("contentController", ["$scope", "$routeParams", "$location", "dataUser", function($scope, $routeParams, $location, dataUser) {
+
+        $scope.algo = "algo por aca";
 
     }]);
 
