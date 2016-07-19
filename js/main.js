@@ -15,34 +15,9 @@ require.config({
 
 
 
-var vmsApp = angular.module("vmSignage", ['ngRoute', 'ngResource']);
 
-// =======================================================================================
-// Routes config
-// =======================================================================================
-vmsApp.config( function($routeProvider) {
-    $routeProvider
-        .when('/', {
-            templateUrl:    'views/content/content.html',
-            controller:     'contentController'
-        })
-        .when('/content', {
-            templateUrl:    'views/content/content.html',
-            controller:     'contentController'
-        })
-        .when('/setlg', {
-            templateUrl:    'views/setlg/setlg.html',
-            controller:     ''
-        })
-        .when('/setplaylist', {
-            templateUrl:    'views/setplaylist/setplaylist.html',
-            controller:     ''
-        })
-        .when('/setshcedule', {
-            templateUrl:    'views/setschedule/setschedule.html',
-            controller:     ''
-        });
-});
+
+
 
 // =======================================================================================
 // Consume JSON with user data
