@@ -1,4 +1,4 @@
-define( ['angularAMD', 'angular-route', 'angular-resource' ], function(angularAMD){
+define( ['angularAMD', 'angular-route', 'angular-resource', 'directive/contentDirective' ], function(angularAMD){
 
     'use strict';
 
