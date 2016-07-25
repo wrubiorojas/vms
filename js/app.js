@@ -44,7 +44,7 @@ define( ['angularAMD', 'angular-route', 'angular-resource' ], function(angularAM
     app.service("dataUser", ["$resource", function($resource) {
 
         return $resource("data/data.json", {}, {
-            query: {
+            getData: {
                 method: "GET",
                 isArray: false
             }
@@ -62,7 +62,7 @@ define( ['angularAMD', 'angular-route', 'angular-resource' ], function(angularAM
 
         // ===================================================================================
         // Set JSON data to $scope variable
-        dataUser.query().$promise.then(function(data) {
+        dataUser.getData().$promise.then(function(data) {
             $scope.userResult = data.user;
         });
 

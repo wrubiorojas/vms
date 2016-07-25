@@ -259,17 +259,20 @@ body {
     text-decoration: none;
 }
 
-#content-media-files div a div img {
-    max-width: 32px;
-    position: relative;
+#content-media-files div a div#img-folder {
+    background: url('../img/template/folder.png') no-repeat center;
+    height: 57px;
+    background-size: 68px;
+    max-width: 500px;
+    margin-bottom: 4px;
     width: 100%;
-    z-index: 3;
 }
 
-#content-media-files div a div i {
-    font-size: 60px;
+#content-media-files div a div#img-folder img {
+    height: 50px;
+    width: 50px;
+    padding-top: 16px;
 }
-
 #content-media-files div a div.caption {
     color: #B3B3B3;
     font-size: 12px;
