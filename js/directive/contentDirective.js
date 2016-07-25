@@ -6,8 +6,8 @@ define( ['angularAMD'], function(angularAMD){
 
         return {
             restrict: 'E',
-            template: '<div>hola mundo </div>',
-            replace: false
+            templateUrl: 'views/content/contentDirective.html',
+            replace: true
         }
     });
 

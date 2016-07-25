@@ -24,7 +24,7 @@
         <div id="content-media-files" class="row no-gutter">
 
             <!-- Show subfolder content directive -->
-            <subfolder-content></subfolder-content>
+            <subfolder-content ng-if="subFolder"></subfolder-content>
 
             <div id="container-folder" class="col-md-2" ng-repeat="fl in userResult.media" ng-if="setRoot == 'root'">
                 <a href="" class="thumbnail" ng-dblclick="showSubFolder()">

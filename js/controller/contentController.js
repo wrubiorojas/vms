@@ -6,17 +6,20 @@ define( [ 'app' ], function(app){
 
         // ===================================================================================
         // Controls access to the root
-        $scope.setRoot  = 'root';
+        $scope.setRoot      = 'root';
+        $scope.subFolder    = false;
 
         $scope.showSubFolder = function() {
             $scope.getDataClick = $(this);
             $scope.setDataClick = $scope.getDataClick[0];
             $scope.nameFolder   = $scope.setDataClick.fl.folder.nameFolder;
-            $scope.setRoot  = 'not root';
+            $scope.setRoot      = 'not root';
+            $scope.subFolder    = true;
         };
 
         $scope.goRoot = function(){
-            $scope.setRoot = 'root';
+            $scope.setRoot      = 'root';
+            $scope.subFolder    = false;
         };
 
 
