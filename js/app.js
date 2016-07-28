@@ -1,4 +1,4 @@
-define( ['angularAMD', 'angular-route', 'angular-resource', 'directive/contentDirective' ], function(angularAMD){
+define( ['angularAMD', 'angular-route', 'angular-resource', 'directive/contentDirective', 'directive/infoFilesDirective' ], function(angularAMD){
 
     'use strict';
 
@@ -81,6 +81,10 @@ define( ['angularAMD', 'angular-route', 'angular-resource', 'directive/contentDi
             }
 
             $scope.lastPath = subStrPath;
+        });
+
+        $('.image-link').on('mfpOpen', function(e /*, params */) {
+            console.log('Popup opened',  $.magnificPopup.instance);
         });
 
     }]);

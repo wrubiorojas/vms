@@ -238,7 +238,7 @@ body {
     max-height: 85vh;
 }
 
-#content-media-files #container-folder {
+#content-media-files .container-folder {
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -277,6 +277,26 @@ body {
     color: #B3B3B3;
     font-size: 12px;
     padding: 0 9px;
+}
+/* =====================================================
+   Files styles */
+#content-media-files div div a div#img-folder {
+    background: url('../img/template/folder.png') no-repeat center;
+    height: 57px;
+    background-size: 68px;
+    max-width: 500px;
+    margin-bottom: 4px;
+    width: 100%;
+}
+
+#content-media-files div div a div#img-files {
+    height: 57px;
+    margin-bottom: 4px;
+}
+
+#content-media-files div div a div#img-files img {
+    width: 76px;
+    height: 57px;
 }
 /* ============================================================================
    General styles

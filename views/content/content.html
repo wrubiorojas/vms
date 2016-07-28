@@ -26,18 +26,25 @@
             <!-- Show subfolder content directive -->
             <subfolder-content ng-if="subFolder"></subfolder-content>
 
-            <div id="container-folder" class="col-md-2" ng-repeat="fl in userResult.media" ng-if="setRoot == 'root'">
-                <a href="" class="thumbnail" ng-dblclick="showSubFolder()">
+            <div class="col-md-2 container-folder" ng-repeat="fl in userResult.media" ng-if="setRoot == 'root'">
+
+                <a href="" class="thumbnail" ng-dblclick="showSubFolder()" ng-click="getFolderInfo()">
+
                     <!-- Show preview of the first image in the folder -->
                     <div id="img-folder">
-                        <img ng-src="{{ fl.folder.files.img.path }}" alt="img_first_file" ng-if="fl.folder.files.img.path">
+                        <img ng-src="{{ fl.folder.files[0].img.path }}" alt="img_first_file" ng-if="fl.folder.files[0].img">
+                        <img ng-src="{{ fl.folder.files[0].video.thumbnail }}" alt="img_first_file" ng-if="!fl.folder.files[0].img && fl.folder.files[0].video">
                     </div>
+
                     <!-- displays the name of the folder -->
                     <div class="caption">
                         {{ fl.folder.nameFolder }}
                     </div>
+
                 </a>
+
             </div>
+
         </div>
 
     </div>
@@ -49,13 +56,13 @@
         <div id="content-active-submenu" class="row no-gutter">
             <div class="col-md-1 content-active-submenu-line"> || </div>
             <div class="col-md-11">
-                <a href=""> File Information </a>
+                <a href=""> Files Information </a>
             </div>
         </div>
 
         <!-- -->
         <div id="content-information-container">
-            ....
+            <information-files></information-files>
         </div>
 
     </div>

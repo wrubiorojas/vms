@@ -15,6 +15,8 @@ define( [ 'app' ], function(app){
             $scope.nameFolder   = $scope.setDataClick.fl.folder.nameFolder;
             $scope.setRoot      = 'not root';
             $scope.subFolder    = true;
+
+            $scope.getSubfolder = $scope.setDataClick.fl;
         };
 
         $scope.goRoot = function(){
@@ -22,6 +24,10 @@ define( [ 'app' ], function(app){
             $scope.subFolder    = false;
         };
 
+        $scope.getFolderInfo = function(){
+            $scope.folderData = $(this);
+            console.log( $scope.folderData[0].fl );
+        }
 
     }]);
 

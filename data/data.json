@@ -6,80 +6,106 @@
             {
                 "folder": {
                     "nameFolder": "Folder name 1",
-                    "files": {
-                        "img": {
-                            "name": "imagen",
-                            "width": "100px",
-                            "height": "200px",
-                            "type": "png",
-                            "path": "img/template/1663017-shao_kahn_green_arrow.png"
+                    "files": [
+                        {
+                            "img": {
+                                "name": "imagen",
+                                "width": "100px",
+                                "height": "200px",
+                                "type": "png",
+                                "path": "img/template/1663017-shao_kahn_green_arrow.png"
+                            }
+                        },
+                        {
+                            "video": {
+                                "name": "video name",
+                                "width": "1920px",
+                                "height": "1080px",
+                                "type": "mp4",
+                                "thumbnail": "img/template/VMNS_Horizontal.png",
+                                "path": ""
+                            }
                         }
-                    },
+                    ],
                     "media": [
-                      {
-                        "folder": {
-                          "nameFolder": "subfolder 1",
-                          "files": {
-                            "video": {
-                              "name": "video name",
-                              "width": "1920px",
-                              "height": "1080px",
-                              "type": "mp4",
-                              "path": "img/template/29.png"
+                        {
+                            "folder": {
+                                "nameFolder": "subfolder 1",
+                                "files": [
+                                    {
+                                        "video": {
+                                          "name": "video name",
+                                          "width": "1920px",
+                                          "height": "1080px",
+                                          "type": "mp4",
+                                          "thumbnail": "img/template/cancel_file.png",
+                                          "path": ""
+                                        }
+                                    }
+                                ]
                             }
-                          }
-                        }
-                      },
-                      {
-                        "folder": {
-                          "nameFolder": "subfolder 1",
-                          "files": {
-                            "video": {
-                              "name": "video name",
-                              "width": "1920px",
-                              "height": "1080px",
-                              "type": "mp4",
-                              "path": "img/template/29.png"
+                        },
+                        {
+                            "folder": {
+                                "nameFolder": "subfolder 2",
+                                "files":[
+                                    {
+                                        "video": {
+                                          "name": "video name",
+                                          "width": "1920px",
+                                          "height": "1080px",
+                                          "type": "mp4",
+                                          "thumbnail": "img/template/VMNS_Horizontal.png",
+                                          "path": ""
+                                        }
+                                    }
+                                ]
                             }
-                          }
                         }
-                      }
                     ]
                 }
             },
             {
                 "folder": {
                     "nameFolder": "Folder name 2",
-                    "files": {
-                        "img": {
-                            "name": "imagen",
-                            "width": "100px",
-                            "height": "200px",
-                            "type": "png",
-                            "path": "img/template/1663017-shao_kahn_green_arrow.png"
+                    "files": [
+                        {
+                            "img": {
+                                  "name": "imagen",
+                                  "width": "100px",
+                                  "height": "200px",
+                                  "type": "png",
+                                  "path": "img/template/1663017-shao_kahn_green_arrow.png"
+                            }
                         }
-                    }
+                    ]
                 }
             },
             {
                 "folder": {
                     "nameFolder": "Folder name 3",
-                    "files": {
-                        "img": {
-                            "name": "imagen",
-                            "width": "100px",
-                            "height": "200px",
-                            "type": "png",
-                            "path": "img/template/1663017-shao_kahn_green_arrow.png"
+                    "files": [
+                        {
+                            "video": {
+                                "name": "imagen",
+                                "width": "100px",
+                                "height": "200px",
+                                "type": "png",
+                                "thumbnail": "img/template/1663017-shao_kahn_green_arrow.png",
+                                "path": ""
+                            }
                         }
-                    }
+                    ]
                 }
             },
             {
                 "folder": {
                     "nameFolder": "Folder name 4",
-                    "files": {
-                    }
+                    "files": [
+                        {
+
+                        }
+                    ]
                 }
             }
         ]

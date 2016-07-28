@@ -1,1 +1,40 @@
-<div>hola mundo</div>
+<div>
+
+    <div class="col-md-2 container-folder" ng-repeat="fl2 in getSubfolder.folder.media">
+
+        <a href="" class="thumbnail">
+
+            <!-- Show preview of the first image in the folder -->
+            <div id="img-folder">
+                <img ng-src=" {{ fl2.folder.files[0].img.path }}" alt="img_first_file" ng-if="fl2.folder.files[0].img">
+                <img ng-src=" {{ fl2.folder.files[0].video.thumbnail }}" alt="img_first_file" ng-if="fl2.folder.files[0].video">
+            </div>
+
+            <!-- displays the name of the folder -->
+            <div class="caption">
+                {{ fl2.folder.nameFolder }}
+            </div>
+
+        </a>
+
+    </div>
+
+    <div class="col-md-2 container-folder" ng-repeat="files in getSubfolder.folder.files">
+
+        <a href="" class="thumbnail">
+
+            <div id="img-files">
+                <img ng-src=" {{ files.img.path }} " alt="img_files" ng-if="files.img" >
+                <img ng-src=" {{ files.video.thumbnail }} " alt="img_files_video" ng-if="files.video">
+            </div>
+
+            <div class="caption">
+                {{ files.img.name || files.video.name }}
+            </div>
+
+        </a>
+
+    </div>
+</div>
+
+
