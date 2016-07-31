@@ -53,20 +53,19 @@ define( [ 'app' ], function(app){
             $scope.folderData           = $(this);
             $scope.getLengthFiles       = 0;
             $scope.getLengthsubfolder   = 0;
+            $scope.loadVideoIcon        = 0;
 
 
             if( $scope.folderData[0].fl != undefined ) {
                 $scope.setFolderData        = $scope.folderData[0].fl;
                 if( $scope.folderData[0].fl.folder.files ) { $scope.getLengthFiles = $scope.folderData[0].fl.folder.files.length; }
                 if( $scope.folderData[0].fl.folder.media ) { $scope.getLengthsubfolder   = $scope.folderData[0].fl.folder.media.length; }
-                console.log( $scope.getLengthFiles, $scope.getLengthsubfolder );
             }
 
             if( $scope.folderData[0].fl2    != undefined ) {
                 $scope.setFolderData = $scope.folderData[0].fl2;
                 if( $scope.folderData[0].fl2.folder.files ) { $scope.getLengthFiles = $scope.folderData[0].fl2.folder.files.length; }
                 if( $scope.folderData[0].fl2.folder.media ) { $scope.getLengthsubfolder   = $scope.folderData[0].fl2.folder.media.length; }
-                console.log( $scope.getLengthFiles, $scope.getLengthsubfolder );
             }
 
             if( $scope.folderData[0].rfiles != undefined ) { $scope.setFolderData = $scope.folderData[0].rfiles; }
@@ -75,9 +74,23 @@ define( [ 'app' ], function(app){
 
             if( $scope.setFolderData.folder != undefined ) { $scope.getFormat = 'folder'; }
             if( $scope.setFolderData.img    != undefined ) { $scope.getFormat = 'img'; }
-            if( $scope.setFolderData.video  != undefined ) { $scope.getFormat = 'video'; }
-            //console.log( $scope.setFolderData, $scope.getFormat );
-        }
+            if( $scope.setFolderData.video  != undefined ) {
+                $scope.getFormat = 'video';
+                checkLoad();
+            }
+
+        };
+
+        var checkLoad = function(){
+            var getVideoElement = document.getElementById('video-info-folder');
+            if( getVideoElement ) {
+                var checkState = function () {
+                    if (getVideoElement.readyState == 4) { $scope.loadVideoIcon = 1;
+                    } else { $timeout(function () { checkState(); }, 100); }
+                };
+                checkState();
+            } else { $timeout(function () { checkLoad(); }, 100); }
+        };
 
     }]);
 

@@ -9,21 +9,22 @@
                     "files": [
                         {
                             "img": {
-                                "name": "imagen",
-                                "width": "100px",
-                                "height": "200px",
+                                "name": "Fullmetal Alchemist",
+                                "width": "3166px",
+                                "height": "2046px",
                                 "type": "png",
-                                "path": "img/template/1663017-shao_kahn_green_arrow.png"
+                                "path": "img/template/fma.jpg"
                             }
                         },
                         {
                             "video": {
-                                "name": "video name",
-                                "width": "1920px",
-                                "height": "1080px",
+                                "name": "puppy",
+                                "duration": "0:15 minutes",
+                                "size": "1920x1080 FHD",
+                                "aspRatio": "16:9",
                                 "type": "mp4",
                                 "thumbnail": "img/template/VMNS_Horizontal.png",
-                                "path": ""
+                                "path": "img/template/puppy.mp4"
                             }
                         }
                     ],
@@ -34,12 +35,13 @@
                                 "files": [
                                     {
                                         "video": {
-                                          "name": "video name",
-                                          "width": "1920px",
-                                          "height": "1080px",
-                                          "type": "mp4",
-                                          "thumbnail": "img/template/cancel_file.png",
-                                          "path": ""
+                                            "name": "puppy",
+                                            "duration": "0:15 minutes",
+                                            "size": "1920x1080 FHD",
+                                            "aspRatio": "16:9",
+                                            "type": "mp4",
+                                            "thumbnail": "img/template/VMNS_Horizontal.png",
+                                            "path": "img/template/puppy.mp4"
                                         }
                                     }
                                 ],
@@ -50,12 +52,13 @@
                                           "files": [
                                               {
                                                   "video": {
-                                                      "name": "video name",
-                                                      "width": "1920px",
-                                                      "height": "1080px",
+                                                      "name": "puppy",
+                                                      "duration": "0:15 minutes",
+                                                      "size": "1920x1080 FHD",
+                                                      "aspRatio": "16:9",
                                                       "type": "mp4",
-                                                      "thumbnail": "img/template/cancel_file.png",
-                                                      "path": ""
+                                                      "thumbnail": "img/template/VMNS_Horizontal.png",
+                                                      "path": "img/template/puppy.mp4"
                                                   }
                                               }
                                           ]
@@ -70,12 +73,13 @@
                                 "files":[
                                     {
                                         "video": {
-                                          "name": "video name",
-                                          "width": "1920px",
-                                          "height": "1080px",
-                                          "type": "mp4",
-                                          "thumbnail": "img/template/VMNS_Horizontal.png",
-                                          "path": ""
+                                            "name": "puppy",
+                                            "duration": "0:15 minutes",
+                                            "size": "1920x1080 FHD",
+                                            "aspRatio": "16:9",
+                                            "type": "mp4",
+                                            "thumbnail": "img/template/VMNS_Horizontal.png",
+                                            "path": "img/template/puppy.mp4"
                                         }
                                     }
                                 ]
@@ -106,12 +110,13 @@
                     "files": [
                         {
                             "video": {
-                                "name": "imagen",
-                                "width": "100px",
-                                "height": "200px",
-                                "type": "png",
-                                "thumbnail": "img/template/1663017-shao_kahn_green_arrow.png",
-                                "path": ""
+                                "name": "puppy",
+                                "duration": "0:15 minutes",
+                                "size": "1920x1080 FHD",
+                                "aspRatio": "16:9",
+                                "type": "mp4",
+                                "thumbnail": "img/template/VMNS_Horizontal.png",
+                                "path": "img/template/puppy.mp4"
                             }
                         }
                     ]
@@ -140,12 +145,13 @@
             },
             {
                 "video": {
-                    "name": "video name",
-                    "width": "1920px",
-                    "height": "1080px",
+                    "name": "puppy",
+                    "duration": "0:15 minutes",
+                    "size": "1920x1080 FHD",
+                    "aspRatio": "16:9",
                     "type": "mp4",
                     "thumbnail": "img/template/VMNS_Horizontal.png",
-                    "path": ""
+                    "path": "img/template/puppy.mp4"
                 }
             }
         ]
