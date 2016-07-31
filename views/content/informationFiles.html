@@ -1,1 +1,15 @@
-<div> Hola mundo </div>
+<div>
+    <div id="info-folder-content" ng-if="getFormat == 'folder'">
+        <div class="thumbnail">
+            <img src="img/template/folder.png" alt="folder-img">
+            <div class="caption">
+                <h3> {{ setFolderData.folder.nameFolder }} </h3>
+                <p>Files: {{ getLengthFiles }}</p>
+                <p>Sub-folders: {{ getLengthsubfolder }}</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+        </div>
+    </div>
+    <div ng-if="getFormat == 'img'">Esto es una imagen</div>
+    <div ng-if="getFormat == 'video'">Esto es un video</div>
+</div>

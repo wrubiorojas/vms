@@ -2,7 +2,7 @@
 
     <div class="col-md-2 container-folder" ng-repeat="fl2 in getSubfolder.folder.media">
 
-        <a href="" class="thumbnail">
+        <a href="" class="thumbnail" ng-dblclick="dblSubfolderClick()" ng-click="getFolderInfo()">
 
             <!-- Show preview of the first image in the folder -->
             <div id="img-folder">
@@ -21,7 +21,7 @@
 
     <div class="col-md-2 container-folder" ng-repeat="files in getSubfolder.folder.files">
 
-        <a href="" class="thumbnail">
+        <a href="" class="thumbnail" ng-click="getFolderInfo()">
 
             <div id="img-files">
                 <img ng-src=" {{ files.img.path }} " alt="img_files" ng-if="files.img" >

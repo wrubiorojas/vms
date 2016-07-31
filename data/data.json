@@ -42,6 +42,25 @@
                                           "path": ""
                                         }
                                     }
+                                ],
+                                "media":[
+                                  {
+                                      "folder": {
+                                          "nameFolder": "sub os subfolder 1",
+                                          "files": [
+                                              {
+                                                  "video": {
+                                                      "name": "video name",
+                                                      "width": "1920px",
+                                                      "height": "1080px",
+                                                      "type": "mp4",
+                                                      "thumbnail": "img/template/cancel_file.png",
+                                                      "path": ""
+                                                  }
+                                              }
+                                          ]
+                                      }
+                                  }
                                 ]
                             }
                         },
@@ -106,6 +125,27 @@
 
                         }
                     ]
+                }
+            }
+        ],
+        "files": [
+            {
+                "img": {
+                    "name": "imagen",
+                    "width": "100px",
+                    "height": "200px",
+                    "type": "png",
+                    "path": "img/template/1663017-shao_kahn_green_arrow.png"
+                }
+            },
+            {
+                "video": {
+                    "name": "video name",
+                    "width": "1920px",
+                    "height": "1080px",
+                    "type": "mp4",
+                    "thumbnail": "img/template/VMNS_Horizontal.png",
+                    "path": ""
                 }
             }
         ]

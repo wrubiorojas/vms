@@ -280,7 +280,8 @@ body {
 }
 /* =====================================================
    Files styles */
-#content-media-files div div a div#img-folder {
+#content-media-files div div a div#img-folder,
+#content-media-files div a div#img-folder {
     background: url('../img/template/folder.png') no-repeat center;
     height: 57px;
     background-size: 68px;
@@ -289,14 +290,34 @@ body {
     width: 100%;
 }
 
-#content-media-files div div a div#img-files {
+#content-media-files div div a div#img-files,
+#content-media-files div a div#img-files {
     height: 57px;
     margin-bottom: 4px;
 }
 
-#content-media-files div div a div#img-files img {
+#content-media-files div div a div#img-files img,
+#content-media-files div a div#img-files img {
     width: 76px;
     height: 57px;
+}
+
+/* ============================================================================
+   General styles
+   ============================================================================ */
+#info-folder-content div.thumbnail {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+#info-folder-content div.thumbnail img {
+    width: 190px;
+}
+
+#info-folder-content div.thumbnail div.caption h3,
+#info-folder-content div.thumbnail div.caption p  {
+    color: #B3B3B3;
 }
 /* ============================================================================
    General styles
