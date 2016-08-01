@@ -1,20 +1,36 @@
-<div>
+<form class="form">
+
+    <!-- // =================================================================================================
+         // Folder information form
+         // ================================================================================================= -->
     <div class="info-folder-content" ng-if="getFormat == 'folder'">
 
-        <div class="thumbnail">
-
-            <img src="img/template/folder.png" alt="folder-img">
-
-            <div class="caption">
-                <h3> {{ setFolderData.folder.nameFolder }} </h3>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-3 control-label">Preview: </label>
+            <div class="col-sm-9">
+                <img id="inputEmail3"  src="img/template/folder.png" alt="folder-img" width="100%">
             </div>
-
+        </div>
+        <hr>
+        <div class="form-group">
+            <div class="col-sm-5">Name: </div>
+            <div class="col-sm-7">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="{{ setFolderData.folder.nameFolder }}" disabled>
+            </div>
         </div>
 
-        <div>
-            <p>Files: {{ getLengthFiles }}</p>
-            <p>Sub-folders: {{ getLengthsubfolder }}</p>
-            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-5">Subfolder: </label>
+            <div class="col-sm-7" style="text-align: right">
+                <p class="form-control-static"> {{ getLengthsubfolder }} </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-5">Media Files: </label>
+            <div class="col-sm-7" style="text-align: right">
+                <p class="form-control-static"> {{ getLengthFiles }} </p>
+            </div>
         </div>
 
     </div>
@@ -68,4 +84,4 @@
 
     </div>
 
-</div>
+</form>
