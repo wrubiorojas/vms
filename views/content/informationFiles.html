@@ -1,85 +1,302 @@
-<form class="form">
+<form class="form form-content-info">
 
     <!-- // =================================================================================================
          // Folder information form
          // ================================================================================================= -->
     <div class="info-folder-content" ng-if="getFormat == 'folder'">
-
+        <!-- // Seleceted folder preview -->
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-3 control-label">Preview: </label>
+            <label for="imgPreview" class="col-sm-3 control-label">Preview: </label>
             <div class="col-sm-9">
-                <img id="inputEmail3"  src="img/template/folder.png" alt="folder-img" width="100%">
+                <img id="imgPreview"  src="img/template/folder.png" alt="folder-img" width="100%">
+            </div>
+        </div>
+        <!-- Button group for edit and save change -->
+        <div class="form-group" style="margin-top: 20px">
+            <div class="col-sm-2 col-sm-offset-4 group-button">
+                <button type="button" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Copy">
+                    <i class="fa fa-files-o" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-sm-2 group-button">
+                <button type="submit" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Cut">
+                    <i class="fa fa-scissors" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-sm-2 group-button">
+                <button type="submit" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Paste">
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-sm-2 group-button">
+                <button type="submit" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Delete">
+                    <i class="fa fa-eraser" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
         <hr>
+        <!-- //  Name folder selected group -->
         <div class="form-group">
-            <div class="col-sm-5">Name: </div>
+            <label for="nameInputFile" class="col-sm-5">Name: </label>
             <div class="col-sm-7">
-                <input type="text" class="form-control" id="inputEmail3" placeholder="{{ setFolderData.folder.nameFolder }}" disabled>
+                <input type="text" class="form-control" id="nameInputFile" value="{{ setFolderData.folder.nameFolder }}" disabled>
             </div>
         </div>
-
+        <!-- // Total subfolder inside group -->
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-5">Subfolder: </label>
+            <label for="totalSubfolfer" class="col-sm-5">Subfolder: </label>
             <div class="col-sm-7" style="text-align: right">
-                <p class="form-control-static"> {{ getLengthsubfolder }} </p>
+                <p id="totalSubfolfer" class="form-control-static"> {{ getLengthsubfolder }} </p>
             </div>
         </div>
-
+        <!-- // Total media files insinde group -->
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-5">Media Files: </label>
+            <label for="totalMediaFiles" class="col-sm-5">Media Files: </label>
             <div class="col-sm-7" style="text-align: right">
-                <p class="form-control-static"> {{ getLengthFiles }} </p>
+                <p id="totalMediaFiles" class="form-control-static"> {{ getLengthFiles }} </p>
+            </div>
+        </div>
+        <!-- // Name of creator -->
+        <div class="form-group">
+            <label for="creatorFolderInfo" class="col-sm-4">Creator: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="creatorFolderInfo" value="{{ setFolderData.folder.creator }}" disabled>
+            </div>
+        </div>
+        <!-- // Last folder modifed  of creator -->
+        <div class="form-group">
+            <label for="modifiedFolderInfo" class="col-sm-4">Last-modified: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="modifiedFolderInfo" value="{{ setFolderData.folder.modified }}" disabled>
+            </div>
+        </div>
+        <!-- Button group for edit and save change -->
+        <div class="form-group" style="margin-top: 20px">
+            <div class="col-sm-5 col-sm-offset-2 group-button">
+                <button type="button" class="btn btn-default btn-xs" style="width: 90%">Edit</button>
+            </div>
+            <div class="col-sm-5 group-button">
+                <button type="submit" class="btn btn-default btn-xs" style="width: 90%">Save</button>
             </div>
         </div>
 
     </div>
-
+    <!-- // =================================================================================================
+         // Media image information form
+         // ================================================================================================= -->
     <div class="info-folder-content" ng-if="getFormat == 'img'">
 
-        <div class="thumbnail">
-            <img ng-src=" {{ setFolderData.img.path }}" alt="preview-img">
-            <div class="caption">
-                <h3> {{ setFolderData.img.name }} </h3>
+        <!-- // Seleceted image media preview -->
+        <div class="form-group">
+            <label for="imgPreview" class="col-sm-3 control-label">Preview: </label>
+            <div class="col-sm-9">
+                <img ng-src=" {{ setFolderData.img.path }}" alt="preview-img" width="100%">
+            </div>
+        </div>
+        <!-- Button group for edit and save change -->
+        <div class="form-group" style="margin-top: 20px">
+            <div class="col-sm-2 col-sm-offset-4 group-button">
+                <button type="button" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Copy">
+                    <i class="fa fa-files-o" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-sm-2 group-button">
+                <button type="submit" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Cut">
+                    <i class="fa fa-scissors" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-sm-2 group-button">
+                <button type="submit" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Paste">
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-sm-2 group-button">
+                <button type="submit" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Delete">
+                    <i class="fa fa-eraser" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <hr>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <label for="nameInputImg" class="col-sm-4">Name: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="nameInputImg" value="{{ setFolderData.img.name }}" disabled>
+            </div>
+        </div>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <label for="TypeImgInfo" class="col-sm-4">Type: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="TypeImgInfo" value="{{ setFolderData.img.type }}" disabled>
+            </div>
+        </div>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <label for="sizeImgInfo" class="col-sm-4">Size: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="sizeImgInfo" value="{{ setFolderData.img.size }}" disabled>
+            </div>
+        </div>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <div class="col-sm-5">
+                <label for="widthImgInfo" class="col-sm-4">width: </label>
+                <div class="col-sm-8" style="padding-top: 3px;">
+                    <input type="text" class="form-control" id="widthImgInfo" value="{{ setFolderData.img.width }} px" disabled>
+                </div>
+            </div>
+            <div class="col-sm-2" style="text-align: center; padding-top: 6px">|</div>
+            <div class="col-sm-5">
+                <label for="heightImgInfo" class="col-sm-4">heigh: </label>
+                <div class="col-sm-8" style="padding-top: 3px;">
+                    <input type="text" class="form-control" id="heightImgInfo" value="{{ setFolderData.img.height }} px" disabled>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="creatorImgInfo" class="col-sm-4">Creator: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="creatorImgInfo" value="{{ setFolderData.img.creator }}" disabled>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="modifiedImgInfo" class="col-sm-4">Last-modified: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="modifiedImgInfo" value="{{ setFolderData.img.modified }}" disabled>
+            </div>
+        </div>
+        <!-- This is not necesary 'cause in WebOS screen the customer don't have access to get file
+        <div class="form-group">
+            <label for="pathImgInfo" class="col-sm-4">Path: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="pathImgInfo" value="{{ setFolderData.img.path }}" disabled>
+            </div>
+        </div>
+        -->
+        <!-- Button group for edit and save change -->
+        <div class="form-group" style="margin-top: 20px">
+            <div class="col-sm-5 col-sm-offset-2 group-button">
+                <button type="button" class="btn btn-default btn-xs" style="width: 90%">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                </button>
+            </div>
+            <div class="col-sm-5 group-button">
+                <button type="submit" class="btn btn-default btn-xs" style="width: 90%">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+                </button>
             </div>
         </div>
 
-        <div>
-            <p>Type: {{ setFolderData.img.type }}</p>
-            <p>width: {{ setFolderData.img.width }}</p>
-            <p>height: {{ setFolderData.img.height }}</p>
-            <p>
-                <a href="#" class="btn btn-primary" role="button">Button</a>
-                <a href="#" class="btn btn-default" role="button">Button</a>
-            </p>
-        </div>
-
     </div>
-
+    <!-- // =================================================================================================
+         // Media image information form
+         // ================================================================================================= -->
     <div id="video-info-content" class="info-folder-content" ng-if="getFormat == 'video'">
 
-        <div class="thumbnail">
+        <!-- // Seleceted video media preview -->
+        <div class="form-group">
             <div id="load-video" ng-if="loadVideoIcon == 0">
                 <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                 <div> Please wait </div>
             </div>
-            <video id="video-info-folder" preload="auto" controls  style="position: relative">
+            <label for="imgPreview" class="col-sm-3 control-label">Preview: </label>
+            <video id="video-info-folder" preload="auto" class="col-sm-9" controls  style="position: relative" width="100%">
                 <source src=" {{ setFolderData.video.path }} " type="video/{{ setFolderData.video.type }}">
             </video>
-            <div class="caption">
-                <h3> {{ setFolderData.video.name }} </h3>
+        </div>
+        <!-- Button group for edit and save change -->
+        <div class="form-group" style="margin-top: 20px">
+            <div class="col-sm-2 col-sm-offset-4 group-button">
+                <button type="button" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Copy">
+                    <i class="fa fa-files-o" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-sm-2 group-button">
+                <button type="submit" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Cut">
+                    <i class="fa fa-scissors" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-sm-2 group-button">
+                <button type="submit" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Paste">
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-sm-2 group-button">
+                <button type="submit" class="btn btn-default btn-xs btn-cppd" style="width: 90%" data-toggle="tooltip" data-placement="bottom" title="Delete">
+                    <i class="fa fa-eraser" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
-
-        <div>
-            <p>Type: {{ setFolderData.video.type }}</p>
-            <p>Size: {{ setFolderData.video.size }}</p>
-            <p>Aspect Ratio: {{ setFolderData.video.aspRatio }}</p>
-            <p>Duration: {{ setFolderData.video.duration }} </p>
-            <p>
-                <a href="#" class="btn btn-primary" role="button">Button</a>
-                <a href="#" class="btn btn-default" role="button">Button</a>
-            </p>
+        <hr>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <label for="nameInputVideo" class="col-sm-4">Name: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="nameInputVideo" value="{{ setFolderData.video.name }}" disabled>
+            </div>
+        </div>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <label for="typeInputVideo" class="col-sm-4">Type: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="typeInputVideo" value="{{ setFolderData.video.type }}" disabled>
+            </div>
+        </div>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <label for="sizeInputVideo" class="col-sm-4">Size: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="sizeInputVideo" value="{{ setFolderData.video.size }}" disabled>
+            </div>
+        </div>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <label for="resolutionInputVideo" class="col-sm-4">Resolution: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="resolutionInputVideo" value="{{ setFolderData.video.resolution }}" disabled>
+            </div>
+        </div>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <label for="durationInputVideo" class="col-sm-4">Duration: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="durationInputVideo" value="{{ setFolderData.video.duration }}" disabled>
+            </div>
+        </div>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <label for="aspRatioInputVideo" class="col-sm-4">Aspect-Ratio: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="aspRatioInputVideo" value="{{ setFolderData.video.aspRatio }}" disabled>
+            </div>
+        </div>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <label for="creatorVideoInfo" class="col-sm-4">Creator: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="creatorVideoInfo" value="{{ setFolderData.video.creator }}" disabled>
+            </div>
+        </div>
+        <!-- //  Name folder selected group -->
+        <div class="form-group">
+            <label for="modifiedVideoInfo" class="col-sm-4">Last-modified: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="modifiedVideoInfo" value="{{ setFolderData.video.modified }}" disabled>
+            </div>
+        </div>
+        <!-- Button group for edit and save change -->
+        <div class="form-group" style="margin-top: 20px">
+            <div class="col-sm-5 col-sm-offset-2 group-button">
+                <button type="button" class="btn btn-default btn-xs" style="width: 90%">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                </button>
+            </div>
+            <div class="col-sm-5 group-button">
+                <button type="submit" class="btn btn-default btn-xs" style="width: 90%">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+                </button>
+            </div>
         </div>
 
     </div>

@@ -5,7 +5,8 @@ define( [ 'app' ], function(app){
     app.register.controller("contentController", ["$scope", "$routeParams", "$location", "dataUser", "$timeout", function($scope, $routeParams, $location, dataUser, $timeout) {
 
         // ===================================================================================
-        // Controls access to the root
+        // Get and show principal subfolder information
+        // ===================================================================================
         $scope.setRoot          = 'root';
         $scope.subFolder        = false;
         $scope.loadSubfolder    = false;
@@ -15,46 +16,79 @@ define( [ 'app' ], function(app){
             $scope.getDataClick     = $(this);
             $scope.setDataClick     = $scope.getDataClick[0];
             $scope.nameFolder       = $scope.setDataClick.fl.folder.nameFolder;
+
             $scope.setRoot          = 'not root';
             $scope.subFolder        = true;
             $scope.loadSubfolder    = true;
 
             $scope.getSubfolder = $scope.setDataClick.fl;
             $scope.getFormat    = '';
+            // *******************************************************************************
+            // Hide border of form tag
+            var getDivContentinfo = $('.form-content-info');
+            getDivContentinfo.css({
+                'border':                   'none',
+                '-webkit-border-radius':    '0',
+                '-moz-border-radius':       '0',
+                'border-radius':            '0'
+            });
         };
-
+        // ===================================================================================
+        // Go to root folder and show information
+        // ===================================================================================
         $scope.goRoot = function(){
             $scope.setRoot          = 'root';
             $scope.subFolder        = false;
             $scope.loadSubfolder    = false;
             $scope.getFormat        = '';
+            // *******************************************************************************
+            // Hide border of form tag
+            var getDivContentinfo = $('.form-content-info');
+            getDivContentinfo.css({
+                'border':                   'none',
+                '-webkit-border-radius':    '0',
+                '-moz-border-radius':       '0',
+                'border-radius':            '0'
+            });
         };
-
         // ===================================================================================
-        // Controls access to the root
+        // Get and show dynamically the internal subfoder of folder
+        // ===================================================================================
         $scope.dblSubfolderClick = function(){
             $scope.loadSubfolder    = false;
+
             $scope.getDataClick     = '';
             $scope.getDataClick     = $(this);
             $scope.setDataClick     = $scope.getDataClick[0];
             $scope.nameFolder       = $scope.setDataClick.fl2.folder.nameFolder;
+
             $scope.getSubfolder = $scope.setDataClick.fl2;
             $scope.getFormat    = '';
             $timeout( function(){
-                console.log( $scope.nameFolder );
                 $scope.loadSubfolder  = true;
-            }, 100 )
+            }, 100 );
+            // *******************************************************************************
+            // Hide border of form tag
+            var getDivContentinfo = $('.form-content-info');
+            getDivContentinfo.css({
+                'border':                   'none',
+                '-webkit-border-radius':    '0',
+                '-moz-border-radius':       '0',
+                'border-radius':            '0'
+            });
         };
-
         // ===================================================================================
-        // Controls access to the root
+        // Get and show de information of folder and files in the right menu
+        // ===================================================================================
         $scope.getFolderInfo = function(){
-
             $scope.folderData           = $(this);
             $scope.getLengthFiles       = 0;
             $scope.getLengthsubfolder   = 0;
             $scope.loadVideoIcon        = 0;
 
+            $('[data-toggle="tooltip"]').tooltip({
+                template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow">asd</div><div class="tooltip-inner"></div></div>'
+            });
 
             if( $scope.folderData[0].fl != undefined ) {
                 $scope.setFolderData        = $scope.folderData[0].fl;
@@ -78,9 +112,19 @@ define( [ 'app' ], function(app){
                 $scope.getFormat = 'video';
                 checkLoad();
             }
-
+            // *******************************************************************************
+            // Show border of form tag
+            var getDivContentinfo = $('.form-content-info');
+            getDivContentinfo.css({
+                'border':                   '1px solid #212121',
+                '-webkit-border-radius':    '4px',
+                '-moz-border-radius':       '4px',
+                'border-radius':            '4px'
+            });
         };
-
+        // ===================================================================================
+        // Function that verify the state of video in the right menu
+        // ===================================================================================
         var checkLoad = function(){
             var getVideoElement = document.getElementById('video-info-folder');
             if( getVideoElement ) {
@@ -91,6 +135,8 @@ define( [ 'app' ], function(app){
                 checkState();
             } else { $timeout(function () { checkLoad(); }, 100); }
         };
+
+
 
     }]);
 

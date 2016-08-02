@@ -6,13 +6,18 @@
             {
                 "folder": {
                     "nameFolder": "Folder name 1",
+                    "creator": "Wilmer Rubio Rojas",
+                    "modified": "2016-08-02 00:30:30",
                     "files": [
                         {
                             "img": {
                                 "name": "Fullmetal Alchemist",
-                                "width": "3166px",
-                                "height": "2046px",
-                                "type": "png",
+                                "width": "3166",
+                                "height": "2046",
+                                "type": "jpg",
+                                "modified": "2016-08-02 00:30:30",
+                                "creator": "Wilmer Rubio",
+                                "size": "1.4 MB",
                                 "path": "img/template/fma.jpg"
                             }
                         },
@@ -20,9 +25,12 @@
                             "video": {
                                 "name": "puppy",
                                 "duration": "0:15 minutes",
-                                "size": "1920x1080 FHD",
+                                "resolution": "1920x1080 FHD",
                                 "aspRatio": "16:9",
                                 "type": "mp4",
+                                "size": "40MB",
+                                "modified": "2016-08-02 00:30:30",
+                                "creator": "Wilmer Rubio",
                                 "thumbnail": "img/template/VMNS_Horizontal.png",
                                 "path": "img/template/puppy.mp4"
                             }
@@ -32,14 +40,19 @@
                         {
                             "folder": {
                                 "nameFolder": "subfolder 1",
+                                "creator": "Wilmer Rubio Rojas",
+                                "modified": "2016-08-02 00:30:30",
                                 "files": [
                                     {
                                         "video": {
                                             "name": "puppy",
                                             "duration": "0:15 minutes",
-                                            "size": "1920x1080 FHD",
+                                            "resolution": "1920x1080 FHD",
                                             "aspRatio": "16:9",
                                             "type": "mp4",
+                                            "size": "40MB",
+                                            "modified": "2016-08-02 00:30:30",
+                                            "creator": "Wilmer Rubio",
                                             "thumbnail": "img/template/VMNS_Horizontal.png",
                                             "path": "img/template/puppy.mp4"
                                         }
@@ -49,14 +62,19 @@
                                   {
                                       "folder": {
                                           "nameFolder": "sub os subfolder 1",
+                                          "creator": "Wilmer Rubio Rojas",
+                                          "modified": "2016-08-02 00:30:30",
                                           "files": [
                                               {
                                                   "video": {
                                                       "name": "puppy",
                                                       "duration": "0:15 minutes",
-                                                      "size": "1920x1080 FHD",
+                                                      "resolution": "1920x1080 FHD",
                                                       "aspRatio": "16:9",
                                                       "type": "mp4",
+                                                      "size": "40MB",
+                                                      "modified": "2016-08-02 00:30:30",
+                                                      "creator": "Wilmer Rubio",
                                                       "thumbnail": "img/template/VMNS_Horizontal.png",
                                                       "path": "img/template/puppy.mp4"
                                                   }
@@ -70,14 +88,19 @@
                         {
                             "folder": {
                                 "nameFolder": "subfolder 2",
+                                "creator": "Wilmer Rubio Rojas",
+                                "modified": "2016-08-02 00:30:30",
                                 "files":[
                                     {
                                         "video": {
                                             "name": "puppy",
                                             "duration": "0:15 minutes",
-                                            "size": "1920x1080 FHD",
+                                            "resolution": "1920x1080 FHD",
                                             "aspRatio": "16:9",
                                             "type": "mp4",
+                                            "size": "40MB",
+                                            "modified": "2016-08-02 00:30:30",
+                                            "creator": "Wilmer Rubio",
                                             "thumbnail": "img/template/VMNS_Horizontal.png",
                                             "path": "img/template/puppy.mp4"
                                         }
@@ -91,13 +114,18 @@
             {
                 "folder": {
                     "nameFolder": "Folder name 2",
+                    "creator": "Wilmer Rubio Rojas",
+                    "modified": "2016-08-02 00:30:30",
                     "files": [
                         {
                             "img": {
                                   "name": "imagen",
-                                  "width": "100px",
-                                  "height": "200px",
+                                  "width": "100",
+                                  "height": "200",
                                   "type": "png",
+                                  "modified": "2016-08-02 00:30:30",
+                                  "creator": "Wilmer Rubio",
+                                  "size": "1.4 MB",
                                   "path": "img/template/1663017-shao_kahn_green_arrow.png"
                             }
                         }
@@ -107,14 +135,19 @@
             {
                 "folder": {
                     "nameFolder": "Folder name 3",
+                    "creator": "Wilmer Rubio Rojas",
+                    "modified": "2016-08-02 00:30:30",
                     "files": [
                         {
                             "video": {
                                 "name": "puppy",
                                 "duration": "0:15 minutes",
-                                "size": "1920x1080 FHD",
+                                "resolution": "1920x1080 FHD",
                                 "aspRatio": "16:9",
                                 "type": "mp4",
+                                "size": "40MB",
+                                "modified": "2016-08-02 00:30:30",
+                                "creator": "Wilmer Rubio",
                                 "thumbnail": "img/template/VMNS_Horizontal.png",
                                 "path": "img/template/puppy.mp4"
                             }
@@ -125,6 +158,8 @@
             {
                 "folder": {
                     "nameFolder": "Folder name 4",
+                    "creator": "Wilmer Rubio Rojas",
+                    "modified": "2016-08-02 00:30:30",
                     "files": [
                         {
 
@@ -137,21 +172,27 @@
             {
                 "img": {
                     "name": "imagen",
-                    "width": "100px",
-                    "height": "200px",
+                    "width": "100",
+                    "height": "200",
                     "type": "png",
+                    "modified": "2016-08-02 00:30:30",
+                    "creator": "Wilmer Rubio",
+                    "size": "1.4 MB",
                     "path": "img/template/1663017-shao_kahn_green_arrow.png"
                 }
             },
             {
                 "video": {
-                    "name": "puppy",
-                    "duration": "0:15 minutes",
-                    "size": "1920x1080 FHD",
-                    "aspRatio": "16:9",
-                    "type": "mp4",
-                    "thumbnail": "img/template/VMNS_Horizontal.png",
-                    "path": "img/template/puppy.mp4"
+                  "name": "puppy",
+                  "duration": "0:15 minutes",
+                  "resolution": "1920x1080 FHD",
+                  "aspRatio": "16:9",
+                  "type": "mp4",
+                  "size": "40MB",
+                  "modified": "2016-08-02 00:30:30",
+                  "creator": "Wilmer Rubio",
+                  "thumbnail": "img/template/VMNS_Horizontal.png",
+                  "path": "img/template/puppy.mp4"
                 }
             }
         ]
