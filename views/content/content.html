@@ -6,20 +6,41 @@
         <!-- // =================================================================================================
              // Navbar submenus content menu
              // ================================================================================================= -->
-        <div id="submenus-container" class="vanbar bg-menu">
-            <a href="" class="btn-root" ng-click="goRoot()">
-                <i class="fa fa-home"></i> &nbsp;Root
-            </a>
-            <span class="content-submenu-line"> | </span>
-            <a href="" class="" role="buttom">
-                <i class="fa fa-folder folder-color"></i> New Folder
-            </a>
-            <a href="" class="" role="buttom">
-                <i class="fa fa-upload upload-color"></i> Upload File
-            </a>
-            <a href="" class="" role="buttom">
-                <i class="fa fa-download download-color"></i> Download File
-            </a>
+        <div id="submenus-container" class="navbar bg-menu">
+            <div class="container-fluid" style="padding-right: 2px">
+                <div class="collapse navbar-collapse" style="padding: 0;">
+                    <ul class="nav navbar-nav col-sm-5" style="padding-top: 3px;">
+                        <li>
+                            <a href="" class="" role="buttom">
+                                <i class="fa fa-folder folder-color"></i> &nbsp;New Folder
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="" role="buttom">
+                                <i class="fa fa-upload upload-color"></i> &nbsp;Upload File
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="" role="buttom">
+                                <i class="fa fa-download download-color"></i> &nbsp;Download File
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!--  -->
+                    <div class="input-group input-group-sm nav-breadcrum">
+                        <a href="" class="input-group-addon btn-back-breadcrumb" ng-click="returnFolder()">
+                            <i class="fa fa-arrow-left red-color" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="input-group-addon btn-back-breadcrumb" ng-click="goRoot()">
+                            <i class="fa fa-home folder-color" aria-hidden="true"></i>
+                            &nbsp;Root
+                        </a>
+                        <input type="text" class="form-control" value="subfolder 1" aria-describedby="sizing-addon3" disabled>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <!-- // =================================================================================================

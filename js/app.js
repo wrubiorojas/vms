@@ -83,6 +83,7 @@ define( ['angularAMD', 'angular-route', 'angular-resource', 'directive/contentDi
             $scope.lastPath = subStrPath;
         });
 
+        //borrar esto
         $('.image-link').on('mfpOpen', function(e /*, params */) {
             console.log('Popup opened',  $.magnificPopup.instance);
         });

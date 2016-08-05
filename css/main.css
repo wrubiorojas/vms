@@ -123,7 +123,7 @@ body {
     padding: 2px 18px;
 }
 .search {
-    margin-top: 4px;
+    margin-top: 2px;
     margin-right: 0;
 }
 
@@ -135,59 +135,101 @@ body {
 }
 
 #custom-search-input input {
-    border: 0;
     box-shadow: none;
-    background-color: #232323;
+    background-color: #292929;
+    border: 1px solid #6d6d6d;
     color: #B3B3B3;
 }
 
 #custom-search-input button {
+    color: #b3b3b3;
     background-color: #454545;
-    border-left: 1px solid #454545;
-    color: #B3B3B3;
-    margin-right: -1px;
+    border: 1px solid #6d6d6d;
+    border-left: 0;
     width: 40px;
+    height:26px;
 }
 
 #custom-search-input button:hover,
 #custom-search-input button:focus {
     border: none;
-    border-right: 1px solid #232323;
     box-shadow: none;
     outline: 0;
 }
 
 #custom-search-input .input-group .form-control {
-    height: 22px;
+    height: 26px;
 }
 
 /* ============================================================================
    Content submenu styles
    ============================================================================ */
 #submenus-container{
-    height: 28px;
-    padding: 4px 15px;
+    min-height: 36px;
+    padding: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+div.nav-breadcrum {
+    height: 26px;
+    margin-top: 4px;
+    background-color: #292929;
+    border: 1px solid #6d6d6d;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+div.nav-breadcrum a.input-group-addon {
+    padding: 0 10px;
+    height: 24px;
+    font-size: 13px;
+    color: #b3b3b3;
+    background-color: #323333 /*#454545*/;
+    border: 0;
+    border-right: 1px solid #6d6d6d;
+}
+
+div.nav-breadcrum a.input-group-addon:hover,
+div.nav-breadcrum a.input-group-addon:active,
+div.nav-breadcrum a.input-group-addon:focus {
+    text-decoration: none;
+}
+
+div.nav-breadcrum input.form-control {
+    height: 24px;
+    background-color: #292929;
+    border: 0;
+    cursor: text;
 }
 
 .content-submenu-line {
     padding: 0 5px;
 }
-#submenus-container a {
+#submenus-container ul li a {
     font-size: 13px;
+    padding: 3px 10px;
+    border: 1px solid #323333;
 }
 
-#submenus-container a:first-child {
+#submenus-container ul li a:first-child {
     margin-right: 8px;
 }
 
-#submenus-container a:not(:first-child) {
+#submenus-container ul li a:not(:first-child) {
     margin: 0 8px;
 }
 
-#submenus-container a:hover,
-#submenus-container a:focus {
+#submenus-container ul li a:hover,
+#submenus-container ul li a:focus {
+    background-color: #454545;
     color: #B3B3B3;
     text-decoration: none;
+    border: 1px solid #292929;
+    border-radius: 4px;
 }
 
 /* ============================================================================
@@ -196,8 +238,8 @@ body {
 .content-active-submenu-line {
     background-color: #323333;
     text-align: center;
-    height: 30px;
-    padding-top: 4px;
+    height: 38px;
+    padding-top: 8px;
     border-left: 2px solid #252525;
     border-right: 2px solid #252525;
     border-bottom: 2px solid #252525;
@@ -209,8 +251,8 @@ body {
     color: #B3B3B3;
     display: block;
     font-size: 13px;
-    height: 28px;
-    padding-top: 6px;
+    height: 37px;
+    padding-top: 8px;
     text-align: center;
 }
 
@@ -226,10 +268,14 @@ body {
     background-color: #323333;
     border-left: 2px solid #252525;
     display: block;
-    height: 83vh;
+    height: 100vh;
     min-height: 100%;
-    padding: 10px;
+}
+
+#content-information-container #div-content-info {
+    height: 80vh;
     overflow: auto;
+    padding: 10px;
 }
 
 /* ============================================================================
@@ -276,11 +322,6 @@ body {
     width: 72px;
     margin-top: 34px;
     margin-left: 12px;
-    /*
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-    */
     -webkit-border-radius: 4px 4px 9px 4px;
     -moz-border-radius: 4px 4px 9px 4px;
     border-radius: 4px 4px 9px 4px;
@@ -391,8 +432,9 @@ form.form-content-info {
 }
 
 .info-folder-content .form-group div img {
-    max-height: 168px;
+    max-height: 200px;
     height: 100%;
+    width: 90%;
 }
 .info-folder-content div.thumbnail video {
     width: 100%;
@@ -477,6 +519,10 @@ a:visited {
 
 .download-color {
     color: #45AD68;
+}
+
+.red-color {
+    color: #ff484f;
 }
 
 

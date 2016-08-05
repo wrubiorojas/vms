@@ -11,11 +11,22 @@ define( [ 'app' ], function(app){
         $scope.subFolder        = false;
         $scope.loadSubfolder    = false;
         $scope.getFormat        = '';
+        $scope.saveFather       = '';
+        $scope.dblclickFather   = false;
+        $scope.ctrReturnFolder  = 0;
+        $scope.getParentFolder  = '';
 
         $scope.showSubFolder = function() {
             $scope.getDataClick     = $(this);
             $scope.setDataClick     = $scope.getDataClick[0];
+
+            console.log( $scope.setDataClick.fl );
+
+            $scope.saveLastFolder[0]   = $scope.setDataClick.fl;
+
             $scope.nameFolder       = $scope.setDataClick.fl.folder.nameFolder;
+
+            $scope.dblclickFather   = true;
 
             $scope.setRoot          = 'not root';
             $scope.subFolder        = true;
@@ -32,6 +43,7 @@ define( [ 'app' ], function(app){
                 '-moz-border-radius':       '0',
                 'border-radius':            '0'
             });
+
         };
         // ===================================================================================
         // Go to root folder and show information
@@ -54,15 +66,35 @@ define( [ 'app' ], function(app){
         // ===================================================================================
         // Get and show dynamically the internal subfoder of folder
         // ===================================================================================
+        $scope.ctrObjectFolders = 0;
+        $scope.saveLastFolder   = [];
+
         $scope.dblSubfolderClick = function(){
             $scope.loadSubfolder    = false;
+            $scope.dblclickFather   = true;
 
             $scope.getDataClick     = '';
-            $scope.getDataClick     = $(this);
-            $scope.setDataClick     = $scope.getDataClick[0];
-            $scope.nameFolder       = $scope.setDataClick.fl2.folder.nameFolder;
+
+            if( $scope.ctrReturnFolder == 1 ){
+                delete $scope.saveLastFolder[$scope.ctrObjectFolders];
+                $scope.ctrObjectFolders--;
+                console.log( $scope.ctrObjectFolders );
+                $scope.setDataClick     = $scope.saveLastFolder[ ($scope.ctrObjectFolders) ];
+                $scope.ctrReturnFolder  = 0;
+                console.log( $scope.saveLastFolder.length );
+
+            } else {
+                $scope.getDataClick     = $(this);
+                $scope.setDataClick     = $scope.getDataClick[0];
+                $scope.ctrObjectFolders++;
+                $scope.saveLastFolder[$scope.ctrObjectFolders]   = $scope.setDataClick;
+            }
 
             $scope.getSubfolder = $scope.setDataClick.fl2;
+            $scope.nameFolder   = $scope.setDataClick.fl2.folder.nameFolder;
+
+            console.log(  $scope.saveLastFolder );
+
             $scope.getFormat    = '';
             $timeout( function(){
                 $scope.loadSubfolder  = true;
@@ -106,12 +138,18 @@ define( [ 'app' ], function(app){
 
             if( $scope.folderData[0].files  != undefined ) { $scope.setFolderData = $scope.folderData[0].files; }
 
-            if( $scope.setFolderData.folder != undefined ) { $scope.getFormat = 'folder'; }
+            if( $scope.setFolderData.folder != undefined ) {
+                $scope.getFormat    = 'folder';
+                $scope.saveFather   = $scope.setFolderData.folder.nameFolder;
+            }
+
             if( $scope.setFolderData.img    != undefined ) { $scope.getFormat = 'img'; }
             if( $scope.setFolderData.video  != undefined ) {
                 $scope.getFormat = 'video';
                 checkLoad();
             }
+
+
             // *******************************************************************************
             // Show border of form tag
             var getDivContentinfo = $('.form-content-info');
@@ -136,7 +174,35 @@ define( [ 'app' ], function(app){
             } else { $timeout(function () { checkLoad(); }, 100); }
         };
 
+        // ===================================================================================
+        // Edit and Save change in content Information files
+        // ===================================================================================
+        $scope.btnEditInformation = function() {
+            var getInput = $('.fg-inputs div input');
+            getInput.attr('disabled', false);
+        };
+        $scope.btnSaveInformation = function() {
+            var getInput = $('.fg-inputs div input');
+            getInput.attr('disabled', true);
+        }
 
+        // ===================================================================================
+        // Breadcrumb
+        // ===================================================================================
+        $scope.returnFolder = function(){
+
+            if( $scope.saveLastFolder.length == 1 ){
+                $scope.goRoot();
+            }
+            if( $scope.saveLastFolder.length == 2 && $scope.ctrObjectFolders == 1 ){
+                $scope.showSubFolder();
+                $scope.ctrReturnFolder  = 1;
+            }
+            if( $scope.saveLastFolder.length > 1 && $scope.ctrObjectFolders != 1 ){
+                $scope.ctrReturnFolder  = 1;
+                $scope.dblSubfolderClick();
+            }
+        };
 
     }]);
 
