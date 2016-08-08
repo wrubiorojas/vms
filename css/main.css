@@ -203,6 +203,7 @@ div.nav-breadcrum input.form-control {
     height: 24px;
     background-color: #292929;
     border: 0;
+    color: #b3b3b3;
     cursor: text;
 }
 
@@ -432,7 +433,7 @@ form.form-content-info {
 }
 
 .info-folder-content .form-group div img {
-    max-height: 200px;
+    max-height: 280px;
     height: 100%;
     width: 90%;
 }

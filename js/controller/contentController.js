@@ -15,14 +15,28 @@ define( [ 'app' ], function(app){
         $scope.dblclickFather   = false;
         $scope.ctrReturnFolder  = 0;
         $scope.getParentFolder  = '';
+        $scope.showBreadcrumb   = 'Root:/';
 
         $scope.showSubFolder = function() {
-            $scope.getDataClick     = $(this);
-            $scope.setDataClick     = $scope.getDataClick[0];
 
-            console.log( $scope.setDataClick.fl );
+            $scope.getDataClick     = '';
 
-            $scope.saveLastFolder[0]   = $scope.setDataClick.fl;
+
+            //console.log( $scope.setDataClick.fl, $scope.ctrReturnFolder  );
+
+            if( $scope.ctrReturnFolder == 1 ){
+                delete $scope.saveLastFolder[1];
+                $scope.setDataClick     = $scope.saveLastFolder[0];
+                $scope.ctrReturnFolder  = 0;
+                $scope.ctrObjectFolders = 0;
+            } else {
+                $scope.getDataClick     = $(this);
+                $scope.setDataClick         = $scope.getDataClick[0];
+                $scope.saveLastFolder[0]    = $scope.setDataClick;
+                console.log( $scope.setDataClick );
+            }
+
+
 
             $scope.nameFolder       = $scope.setDataClick.fl.folder.nameFolder;
 
@@ -44,6 +58,7 @@ define( [ 'app' ], function(app){
                 'border-radius':            '0'
             });
 
+            $scope.setBreadcrumb();
         };
         // ===================================================================================
         // Go to root folder and show information
@@ -53,6 +68,8 @@ define( [ 'app' ], function(app){
             $scope.subFolder        = false;
             $scope.loadSubfolder    = false;
             $scope.getFormat        = '';
+
+            $scope.ctrObjectFolders = 0;
             // *******************************************************************************
             // Hide border of form tag
             var getDivContentinfo = $('.form-content-info');
@@ -62,6 +79,7 @@ define( [ 'app' ], function(app){
                 '-moz-border-radius':       '0',
                 'border-radius':            '0'
             });
+            $scope.setBreadcrumb();
         };
         // ===================================================================================
         // Get and show dynamically the internal subfoder of folder
@@ -78,10 +96,8 @@ define( [ 'app' ], function(app){
             if( $scope.ctrReturnFolder == 1 ){
                 delete $scope.saveLastFolder[$scope.ctrObjectFolders];
                 $scope.ctrObjectFolders--;
-                console.log( $scope.ctrObjectFolders );
                 $scope.setDataClick     = $scope.saveLastFolder[ ($scope.ctrObjectFolders) ];
                 $scope.ctrReturnFolder  = 0;
-                console.log( $scope.saveLastFolder.length );
 
             } else {
                 $scope.getDataClick     = $(this);
@@ -108,6 +124,7 @@ define( [ 'app' ], function(app){
                 '-moz-border-radius':       '0',
                 'border-radius':            '0'
             });
+            $scope.setBreadcrumb();
         };
         // ===================================================================================
         // Get and show de information of folder and files in the right menu
@@ -184,24 +201,50 @@ define( [ 'app' ], function(app){
         $scope.btnSaveInformation = function() {
             var getInput = $('.fg-inputs div input');
             getInput.attr('disabled', true);
-        }
+        };''
 
         // ===================================================================================
         // Breadcrumb
         // ===================================================================================
         $scope.returnFolder = function(){
 
-            if( $scope.saveLastFolder.length == 1 ){
+            console.log( $scope.saveLastFolder.length, $scope.ctrObjectFolders );
+
+            if( $scope.saveLastFolder.length >= 1 && $scope.ctrObjectFolders == 0 ){
                 $scope.goRoot();
             }
-            if( $scope.saveLastFolder.length == 2 && $scope.ctrObjectFolders == 1 ){
-                $scope.showSubFolder();
+            if( $scope.saveLastFolder.length >= 2 && $scope.ctrObjectFolders == 1 ){
                 $scope.ctrReturnFolder  = 1;
+                $scope.showSubFolder();
             }
-            if( $scope.saveLastFolder.length > 1 && $scope.ctrObjectFolders != 1 ){
+            if( $scope.saveLastFolder.length > 2  && $scope.ctrObjectFolders >= 2 ){
                 $scope.ctrReturnFolder  = 1;
                 $scope.dblSubfolderClick();
             }
+        };
+
+        $scope.setBreadcrumb = function() {
+            $scope.showBreadcrumb = 'Root:/';
+
+            if( $scope.ctrObjectFolders == 0 && $scope.subFolder  == true ) {
+                $scope.showBreadcrumb = $scope.showBreadcrumb + '>' + $scope.saveLastFolder[0].fl.folder.nameFolder;
+            }
+
+            console.log( $scope.ctrObjectFolders );
+
+            for(  var i  = 0; i < ( $scope.ctrObjectFolders + 1 ); i++) {
+                if( i >= 1 ) {
+                    console.log( i );
+                    $scope.showBreadcrumb = $scope.showBreadcrumb + '>' + $scope.saveLastFolder[i].fl2.folder.nameFolder;
+                }
+                if( $scope.ctrObjectFolders > 0 && i == 0 ){
+                    console.log( i );
+                    $scope.showBreadcrumb = $scope.showBreadcrumb + '>' + $scope.saveLastFolder[i].fl.folder.nameFolder;
+                }
+            }
+
+
+            console.log( $scope.showBreadcrumb );
         };
 
     }]);
